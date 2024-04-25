@@ -41,10 +41,8 @@
         <div id="movieCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <?php
-                // Example movie data array
                 $movies = [['title' => 'Movie 1', 'image' => asset('images/movie1.jpg')], ['title' => 'Movie 2', 'image' => asset('images/movie2.jpg')], ['title' => 'Movie 3', 'image' => asset('images/movie3.jpg')]];
                 
-                // Generate carousel indicators
                 foreach ($movies as $index => $movie) {
                     echo '<li data-target="#movieCarousel" data-slide-to="' . $index . '" class="' . ($index === 0 ? 'active' : '') . '"></li>';
                 }
@@ -52,7 +50,6 @@
             </ol>
             <div class="carousel-inner">
                 <?php
-                // Generate carousel items
                 foreach ($movies as $index => $movie) {
                     echo '<div class="carousel-item ' . ($index === 0 ? 'active' : '') . '">';
                     echo '<img src="' . $movie['image'] . '" class="d-block w-100" alt="' . $movie['title'] . '">';
@@ -69,7 +66,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <!-- End Carousel -->
     </div>
 
     <!-- Bootstrap JavaScript and dependencies (optional) -->
