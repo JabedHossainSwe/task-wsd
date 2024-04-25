@@ -7,20 +7,34 @@
     <title>Movie Listing App</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Optional Bootstrap theme -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="mt-5">Welcome to Movie Listing App</h1>
-        <ul class="list-group mt-4">
-            <li class="list-group-item"><a href="{{ route('register') }}" class="btn btn-primary">Register</a></li>
-            <li class="list-group-item"><a href="{{ route('login') }}" class="btn btn-success">Login</a></li>
-            <li class="list-group-item"><a href="{{ route('movies.index') }}" class="btn btn-info">View All Movies</a></li>
-            <li class="list-group-item"><a href="{{ route('user.favorites') }}" class="btn btn-warning">View Favorites</a></li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Movie App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('movies.index') }}">View All Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user.favorites') }}">View Favorites</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Bootstrap JavaScript and dependencies (optional) -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
