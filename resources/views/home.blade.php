@@ -42,12 +42,8 @@
             <ol class="carousel-indicators">
                 <?php
                 // Example movie data array
-                $movies = [
-                    ['title' => 'Movie 1', 'image' => asset('iamges/movie1.jpg')],
-                    ['title' => 'Movie 2', 'image' => 'movie2.jpg'],
-                    ['title' => 'Movie 3', 'image' => 'movie3.jpg']
-                ];
-
+                $movies = [['title' => 'Movie 1', 'image' => asset('images/movie1.jpg')], ['title' => 'Movie 2', 'image' => asset('images/movie2.jpg')], ['title' => 'Movie 3', 'image' => asset('images/movie3.jpg')]];
+                
                 // Generate carousel indicators
                 foreach ($movies as $index => $movie) {
                     echo '<li data-target="#movieCarousel" data-slide-to="' . $index . '" class="' . ($index === 0 ? 'active' : '') . '"></li>';
